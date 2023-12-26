@@ -31,7 +31,7 @@ local palette = {
 }
 
 return palette
-
+	--Orginal Tokyodark colours
 	--	black = "#06080A",
 	--  bg0 = "#11121D",
     --bg1 = "#1A1B2A",--Nvim Cursor Line
