@@ -1,7 +1,11 @@
 local opt = vim.opt -- for conciseness, install the extension
+vim.o.guicursor = 'n-v-c-sm-i-ci-ve:block,r-cr-o:hor20,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor'
 
 opt.mouse = 'v'
--- line numbers
+
+vim.o.winbar = '%=%m\\ %f'
+
+-- line numbeirs
 opt.relativenumber = true -- show relative line numbers
 opt.number = true -- shows absolute line number on cursor line (when relative number is on)
 
@@ -19,7 +23,7 @@ opt.ignorecase = true -- ignore case when searching
 opt.smartcase = true -- if you include mixed case in your search, assumes you want case-sensitive
 
 -- cursor line
-opt.cursorline = true -- highlight the current cursor line
+--opt.cursorline = true -- highlight the current cursor line
 
 -- appearance
 opt.termguicolors = true
@@ -51,4 +55,13 @@ vim.g.vimwiki_list = {{
   syntax = 'markdown',
   ext = '.md'
 }}
+
+-- highlight on yank
+vim.api.nvim_create_autocmd('TextYankPost', {
+  callback = function()
+    vim.highlight.on_yank()
+  end,
+})
+
+
 

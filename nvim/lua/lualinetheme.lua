@@ -88,7 +88,7 @@ ins_left {
 ins_left {
   -- mode component
   function()
-    return ''
+    return ' 󰙏 Carlos Juan MODE'
   end,
   color = function()
     -- auto change color according to neovims mode
@@ -168,9 +168,8 @@ ins_left {
     return msg
   end,
   icon = ' LSP:',
-  color = { fg = '#ec5f67', gui = 'bold' },
+  color = { fg = '#51AFEF', gui = 'bold' },
 }
-
 -- Add components to right sections
 ins_right {
   'o:encoding', -- option component same as &encoding in viml

@@ -11,23 +11,36 @@ return {
 			require("mason-lspconfig").setup({
 				ensure_installed = {
 					"lua_ls",
-				},
+					"clangd",
+        },
 			})
-		end,
+    end,
 	},
 	{
 		"neovim/nvim-lspconfig",
 		config = function()
+			--local capabilities = require("cmp_nvim_lsp").default_capabilities()
 			local lspconfig = require("lspconfig")
-			lspconfig.lua_ls.setup({})
-			lspconfig.tsserver.setup({})
-      lspconfig.pyright.setup({})
-      lspconfig.clangd.setup({})
-      lspconfig.swift_mesonls.setup({})
-
-			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
-			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
-			vim.keymap.set({ "n" }, "<leader>ca", vim.lsp.buf.code_action, {})
+			lspconfig.lua_ls.setup({
+				capabilities = capabilities,
+				on_attach = on_attach,
+			})
+			lspconfig.tsserver.setup({
+				capabilities = capabilities,
+				on_attach = on_attach,
+			})
+			lspconfig.pyright.setup({
+				capabilities = capabilities,
+				on_attach = on_attach,
+			})
+			lspconfig.html.setup({
+				capabilities = capabilities,
+				on_attach = on_attach,
+			})
+			lspconfig.clangd.setup({
+				capabilities = capabilities,
+				on_attach = on_attach,
+			})
 		end,
 	},
 }

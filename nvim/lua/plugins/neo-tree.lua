@@ -14,7 +14,7 @@ return {
 			enable_diagnostics = true,
 			window = {
 				position = "left",
-				width = 29,
+				width = 35,
 				mapping_options = {
 					noremap = true,
 					nowait = true,
@@ -24,6 +24,6 @@ return {
 		-- set keymaps
 		local keymap = vim.keymap -- for conciseness
 
-		keymap.set("n", "<leader>e", ":Neotree toggle<CR>", { noremap = true, silent = true })
+		keymap.set("n", "<Tab>", ":Neotree toggle<CR>", { noremap = true, silent = true })
 	end,
 }

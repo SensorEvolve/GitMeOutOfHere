@@ -29,17 +29,17 @@ return {
 		local wk = require("which-key")
 
 		keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Fuzzy find files in cwd" })
-		keymap.set("n", "<leader>fr", "<cmd>Telescope oldfiles<cr>", { desc = "Fuzzy find recent files" })
+		keymap.set("n", "<leader>fo", "<cmd>Telescope oldfiles<cr>", { desc = "Fuzzy find recent files" })
 		keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>", { desc = "Find string in cwd" })
-		keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>", { desc = "Find string under cursor in cwd" })
+		keymap.set("n", "<leader>fg", "<cmd>Telescope grep_string<cr>", { desc = "Find string under cursor in cwd" })
 --  keymap.set("n", "<leader>fw", "/<CR>", {desc = "Search Word"})
 
 		local telescope_mappings = {
 			name = "Telescope", -- This will be displayed as the group name in the popup
 			f = { "<cmd>Telescope find_files<cr>", "Find File" },
-			r = { "<cmd>Telescope oldfiles<cr>", "Recent Files" },
+			o = { "<cmd>Telescope oldfiles<cr>", "Recent Files" },
 			s = { "<cmd>Telescope live_grep<cr>", "Search String" },
-			c = { "<cmd>Telescope grep_string<cr>", "Search Under Cursor" },
+			g = { "<cmd>Telescope grep_string<cr>", "Search Under Cursor" },
 			-- Add more Telescope mappings here
 		}
 

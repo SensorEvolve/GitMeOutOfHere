@@ -14,6 +14,7 @@ return{
 {"lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
 {'vimwiki/vimwiki'},
 {"nvim-telescope/telescope-ui-select.nvim"},
+{'s1n7ax/nvim-window-picker'},
   --Mason Lsp
 {"williamboman/mason.nvim"},
 {"williamboman/mason-lspconfig.nvim"},
@@ -21,14 +22,18 @@ return{
   -- Lsp
 {"hrsh7th/cmp-nvim-lsp"},
 {"nvimtools/none-ls.nvim"},
-{"JCWasmx86/Swift-MesonLSP"},
   -- Cmp
 {"hrsh7th/nvim-cmp"},
+{"simrat39/rust-tools.nvim"},
+{"mfussenegger/nvim-dap"},
 --Window navigator
-{'christoomey/vim-tmux-navigator'},
---Term
+{"christoomey/vim-tmux-navigator"},
+  --Term
 {"akinsho/toggleterm.nvim"},
 {'m4xshen/autoclose.nvim'},
 {'rcarriga/nvim-notify'},
-{'VonHeikemen/fine-cmdline.nvim'}
+{"folke/noice.nvim"},
+{'norcalli/nvim-colorizer.lua'},
+{'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons'},
+{'junegunn/vim-peekaboo'},
 }
