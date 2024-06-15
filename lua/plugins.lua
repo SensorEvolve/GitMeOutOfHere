@@ -15,6 +15,7 @@ return{
 {'vimwiki/vimwiki'},
 {"nvim-telescope/telescope-ui-select.nvim"},
 {'s1n7ax/nvim-window-picker'},
+{'nvim-zh/colorful-winsep.nvim'},
   --Mason Lsp
 {"williamboman/mason.nvim"},
 {"williamboman/mason-lspconfig.nvim"},
